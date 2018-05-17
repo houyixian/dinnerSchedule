@@ -42,7 +42,7 @@ class dinnerScheduleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
-        sleep(3)
+        sleep(5)
         let textField1 = webViewsQuery.textFields["姓名"]
         textField1.tap()
         let nextButton = app.toolbars["Toolbar"].buttons["Next"]
@@ -75,7 +75,7 @@ class dinnerScheduleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
-        sleep(3)
+        sleep(5)
         let textField1 = webViewsQuery.textFields["姓名"]
         textField1.tap()
         let nextButton = app.toolbars["Toolbar"].buttons["Next"]
@@ -106,7 +106,7 @@ class dinnerScheduleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
-        sleep(3)
+        sleep(5)
         let textField1 = webViewsQuery.textFields["姓名"]
         textField1.tap()
         let nextButton = app.toolbars["Toolbar"].buttons["Next"]
@@ -137,7 +137,7 @@ class dinnerScheduleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
-        sleep(3)
+        sleep(5)
         let textField1 = webViewsQuery.textFields["姓名"]
         textField1.tap()
         let nextButton = app.toolbars["Toolbar"].buttons["Next"]
@@ -168,7 +168,7 @@ class dinnerScheduleUITests: XCTestCase {
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
-        sleep(3)
+        sleep(5)
         let textField1 = webViewsQuery.textFields["姓名"]
         textField1.tap()
         let nextButton = app.toolbars["Toolbar"].buttons["Next"]
