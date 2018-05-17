@@ -39,6 +39,9 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "dinnerScheduleUITests/testExample()">
+               </Test>
+               <Test
                   Identifier = "dinnerScheduleUITests/testKeyboardExample()">
                </Test>
             </SkippedTests>
