@@ -162,35 +162,35 @@ class dinnerScheduleUITests: XCTestCase {
         
     }
     
-    func testWangshuoSchedule() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let app = XCUIApplication()
-        let webViewsQuery = app.webViews
-        sleep(5)
-        let textField1 = webViewsQuery.textFields["姓名"]
-        textField1.tap()
-        let nextButton = app.toolbars["Toolbar"].buttons["Next"]
-        nextButton.tap()
-        let toolbar = app.toolbars["Toolbar"]
-        toolbar.buttons["Previous"].tap()
-        textField1.typeText("王硕")
-        let telephoneTextField = webViewsQuery.textFields["手机号"]
-        telephoneTextField.tap()
-        telephoneTextField.typeText("15810950099")
-        
-        webViewsQuery/*@START_MENU_TOKEN@*/.otherElements["请选择"]/*[[".otherElements[\"报名\"].otherElements[\"请选择\"]",".otherElements[\"请选择\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.pickerWheels["请选择"].adjust(toPickerWheelValue: "电子业务板块-研发中心")
-        app.toolbars["Toolbar"].buttons["Done"].tap()
-        webViewsQuery/*@START_MENU_TOKEN@*/.buttons["立即报名"]/*[[".otherElements[\"报名\"].buttons[\"立即报名\"]",".buttons[\"立即报名\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        sleep(5)
-        let successScheduleStaticText = webViewsQuery.staticTexts["报名成功！"]
-        let alreadyScheduleStaticText = webViewsQuery.staticTexts["您已报名啦！"]
-        let success = successScheduleStaticText.exists || alreadyScheduleStaticText.exists
-        XCTAssertTrue(success)
-        
-    }
+//    func testWangshuoSchedule() {
+//        // Use recording to get started writing UI tests.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        
+//        let app = XCUIApplication()
+//        let webViewsQuery = app.webViews
+//        sleep(5)
+//        let textField1 = webViewsQuery.textFields["姓名"]
+//        textField1.tap()
+//        let nextButton = app.toolbars["Toolbar"].buttons["Next"]
+//        nextButton.tap()
+//        let toolbar = app.toolbars["Toolbar"]
+//        toolbar.buttons["Previous"].tap()
+//        textField1.typeText("王硕")
+//        let telephoneTextField = webViewsQuery.textFields["手机号"]
+//        telephoneTextField.tap()
+//        telephoneTextField.typeText("15810950099")
+//        
+//        webViewsQuery/*@START_MENU_TOKEN@*/.otherElements["请选择"]/*[[".otherElements[\"报名\"].otherElements[\"请选择\"]",".otherElements[\"请选择\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.pickerWheels["请选择"].adjust(toPickerWheelValue: "电子业务板块-研发中心")
+//        app.toolbars["Toolbar"].buttons["Done"].tap()
+//        webViewsQuery/*@START_MENU_TOKEN@*/.buttons["立即报名"]/*[[".otherElements[\"报名\"].buttons[\"立即报名\"]",".buttons[\"立即报名\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        
+//        sleep(5)
+//        let successScheduleStaticText = webViewsQuery.staticTexts["报名成功！"]
+//        let alreadyScheduleStaticText = webViewsQuery.staticTexts["您已报名啦！"]
+//        let success = successScheduleStaticText.exists || alreadyScheduleStaticText.exists
+//        XCTAssertTrue(success)
+//        
+//    }
     
 }
