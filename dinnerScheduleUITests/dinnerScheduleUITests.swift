@@ -19,6 +19,17 @@ class dinnerScheduleUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
+        //判断今天是否是周末，如果是的话，则终止程序的运行
+        let calendar = Calendar.current
+        if let weekday = calendar.dateComponents([.weekday], from: Date()).weekday {
+            print(weekday)
+//            print((weekday + 5) % 6) 转换函数不对
+            guard [2, 3, 4 , 5, 6].contains(weekday) else {
+                XCUIApplication().terminate()
+                return
+            }
+        }
+
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -39,6 +50,7 @@ class dinnerScheduleUITests: XCTestCase {
     func testHouyixianSchedule() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
         
         let app = XCUIApplication()
         let webViewsQuery = app.webViews
